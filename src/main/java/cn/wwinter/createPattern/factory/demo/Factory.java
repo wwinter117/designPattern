@@ -7,6 +7,6 @@ package cn.wwinter.createPattern.factory.demo;
  * Datetime: 2023/10/28
  * Author: zhangdd
  */
-public interface Creator<T> {
+public interface Factory<T> {
     T creat();
 }

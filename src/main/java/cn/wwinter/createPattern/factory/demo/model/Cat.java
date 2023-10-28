@@ -7,5 +7,5 @@ package cn.wwinter.createPattern.factory.demo.model;
  * Datetime: 2023/10/28
  * Author: zhangdd
  */
-public class Cat implements Pet{
+public class Cat extends Pet {
 }
