@@ -1,10 +1,10 @@
 package cn.wwinter.structurePattern.proxy.demo;
 
-import cn.wwinter.common.StringConst;
 import cn.wwinter.structurePattern.adapter.demo.DownCaseFilter;
 import cn.wwinter.structurePattern.adapter.demo.Filter;
 import cn.wwinter.structurePattern.adapter.demo.StringFilter;
 import cn.wwinter.structurePattern.adapter.demo.UpCaseFilter;
+import cn.wwinter.structurePattern.proxy.FilterConsumer;
 
 /**
  * ClassName: StringFilterProxy 代理过滤器，实现耗时计算
@@ -14,7 +14,7 @@ import cn.wwinter.structurePattern.adapter.demo.UpCaseFilter;
  * Author: zhangdd
  */
 public class StringFilterProxy extends StringFilter {
-    private Filter<String> filter;
+    private final Filter<String> filter;
 
     public StringFilterProxy(Filter<String> filter) {
         this.filter = filter;
@@ -29,11 +29,8 @@ public class StringFilterProxy extends StringFilter {
         return res;
     }
 
-    public static void consumer(Filter<String> filter) {
-        System.out.println(filter.filter(StringConst.TEST_STRING));
-    }
     public static void main(String[] args) {
-        consumer(new StringFilterProxy(new UpCaseFilter()));
-        consumer(new StringFilterProxy(new DownCaseFilter()));
+        FilterConsumer.consumer(new StringFilterProxy(new UpCaseFilter()));
+        FilterConsumer.consumer(new StringFilterProxy(new DownCaseFilter()));
     }
 }
