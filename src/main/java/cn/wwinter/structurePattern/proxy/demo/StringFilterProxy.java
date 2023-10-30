@@ -1,8 +1,8 @@
 package cn.wwinter.structurePattern.proxy.demo;
 
+import cn.wwinter.structurePattern.adapter.demo.AbstractStringFilter;
 import cn.wwinter.structurePattern.adapter.demo.DownCaseFilter;
 import cn.wwinter.structurePattern.adapter.demo.Filter;
-import cn.wwinter.structurePattern.adapter.demo.StringFilter;
 import cn.wwinter.structurePattern.adapter.demo.UpCaseFilter;
 import cn.wwinter.structurePattern.proxy.FilterConsumer;
 
@@ -13,7 +13,7 @@ import cn.wwinter.structurePattern.proxy.FilterConsumer;
  * Datetime: 2023/10/29
  * Author: zhangdd
  */
-public class StringFilterProxy extends StringFilter {
+public class StringFilterProxy extends AbstractStringFilter {
     private final Filter<String> filter;
 
     public StringFilterProxy(Filter<String> filter) {

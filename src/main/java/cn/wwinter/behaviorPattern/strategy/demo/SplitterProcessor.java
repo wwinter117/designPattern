@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Datetime: 2023/10/28
  * Author: zhangdd
  */
-public class SplitterProcessor extends StringProcessor {
+public class SplitterProcessor extends AbstractStringProcessor {
     @Override
     public String process(String s) {
         return Arrays.toString(s.split(" "));

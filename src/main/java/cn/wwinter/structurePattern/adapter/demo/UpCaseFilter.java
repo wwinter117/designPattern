@@ -7,7 +7,7 @@ package cn.wwinter.structurePattern.adapter.demo;
  * Datetime: 2023/10/28
  * Author: zhangdd
  */
-public class UpCaseFilter extends StringFilter{
+public class UpCaseFilter extends AbstractStringFilter {
     @Override
     public String filter(String s) {
         StringBuilder sb = new StringBuilder();

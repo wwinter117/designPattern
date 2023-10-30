@@ -7,7 +7,7 @@ package cn.wwinter.behaviorPattern.strategy.demo;
  * Datetime: 2023/10/28
  * Author: zhangdd
  */
-public class DownCaseProcessor extends StringProcessor{
+public class DownCaseProcessor extends AbstractStringProcessor {
     @Override
     public String process(String s) {
         return s.toLowerCase();
