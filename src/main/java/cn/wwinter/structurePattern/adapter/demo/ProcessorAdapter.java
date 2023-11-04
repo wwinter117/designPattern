@@ -28,7 +28,7 @@ public class ProcessorAdapter<T> implements Processor<T>{
 
     public static void main(String[] args) {
         String s = "aYUGUIshiu UYDAFGJVH iaysgduy 1322 idausdga38427";
-        Apply.process(new ProcessorAdapter<String>(new UpCaseFilter()), s);
-        Apply.process(new ProcessorAdapter<String>(new DownCaseFilter()), s);
+        ProcessorConsumer.process(new ProcessorAdapter<String>(new UpCaseFilter()), s);
+        ProcessorConsumer.process(new ProcessorAdapter<String>(new DownCaseFilter()), s);
     }
 }

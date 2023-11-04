@@ -1,6 +1,6 @@
 package cn.wwinter.structurePattern.adapter.demo;
 
-import cn.wwinter.behaviorPattern.strategy.demo.Apply;
+import cn.wwinter.behaviorPattern.strategy.demo.ProcessorConsumer;
 import cn.wwinter.behaviorPattern.strategy.demo.Processor;
 import cn.wwinter.common.StringConst;
 
@@ -29,6 +29,6 @@ public class OtherProcessorLikeAdapter implements Processor<String> {
     }
 
     public static void main(String[] args) {
-        Apply.process(new OtherProcessorLikeAdapter(new OtherProcessorLike()), StringConst.TEST_STRING);
+        ProcessorConsumer.process(new OtherProcessorLikeAdapter(new OtherProcessorLike()), StringConst.TEST_STRING);
     }
 }
